@@ -1,4 +1,423 @@
 {
-  "version": 2,
-  "blockIds": []
+  "version": 3,
+  "blockIds": [
+    "intro-title",
+    "intro-hook",
+    "intro-promise",
+    "change-heading",
+    "change-idea",
+    "change-visual",
+    "change-solution-meaning",
+    "change-practice-rate",
+    "block-1787910462860",
+    "change-practice-solution",
+    "separating-heading",
+    "separating-method",
+    "separating-worked-example",
+    "separating-visual",
+    "separating-integrals",
+    "separating-practice-identify",
+    "separating-practice-first-move",
+    "constant-heading",
+    "constant-timing",
+    "constant-visual",
+    "constant-particular",
+    "constant-practice-particular",
+    "constant-practice-timing",
+    "modelling-heading",
+    "modelling-setup",
+    "modelling-visual",
+    "modelling-transfer",
+    "modelling-practice-prediction",
+    "modelling-practice-setup",
+    "wrapping-heading",
+    "wrapping-summary",
+    "wrapping-forward"
+  ],
+  "rows": [
+    {
+      "id": "layout-intro-title",
+      "type": "stack",
+      "columns": [
+        [
+          "intro-title"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-intro-hook",
+      "type": "stack",
+      "columns": [
+        [
+          "intro-hook"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-intro-promise",
+      "type": "stack",
+      "columns": [
+        [
+          "intro-promise"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-change-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "change-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-change-idea",
+      "type": "stack",
+      "columns": [
+        [
+          "change-idea"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-change-visual",
+      "type": "stack",
+      "columns": [
+        [
+          "change-visual"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-change-solution-meaning",
+      "type": "stack",
+      "columns": [
+        [
+          "change-solution-meaning"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-change-practice-rate",
+      "type": "stack",
+      "columns": [
+        [
+          "change-practice-rate"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-block-1787910462860",
+      "type": "stack",
+      "columns": [
+        [
+          "block-1787910462860"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-change-practice-solution",
+      "type": "stack",
+      "columns": [
+        [
+          "change-practice-solution"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-separating-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "separating-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-separating-method",
+      "type": "stack",
+      "columns": [
+        [
+          "separating-method"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-separating-worked-example",
+      "type": "stack",
+      "columns": [
+        [
+          "separating-worked-example"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-separating-visual",
+      "type": "stack",
+      "columns": [
+        [
+          "separating-visual"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-separating-integrals",
+      "type": "stack",
+      "columns": [
+        [
+          "separating-integrals"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-separating-practice-identify",
+      "type": "stack",
+      "columns": [
+        [
+          "separating-practice-identify"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-separating-practice-first-move",
+      "type": "stack",
+      "columns": [
+        [
+          "separating-practice-first-move"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-constant-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "constant-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-constant-timing",
+      "type": "stack",
+      "columns": [
+        [
+          "constant-timing"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-constant-visual",
+      "type": "stack",
+      "columns": [
+        [
+          "constant-visual"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-constant-particular",
+      "type": "stack",
+      "columns": [
+        [
+          "constant-particular"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-constant-practice-particular",
+      "type": "stack",
+      "columns": [
+        [
+          "constant-practice-particular"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-constant-practice-timing",
+      "type": "stack",
+      "columns": [
+        [
+          "constant-practice-timing"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-modelling-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "modelling-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-modelling-setup",
+      "type": "stack",
+      "columns": [
+        [
+          "modelling-setup"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-modelling-visual",
+      "type": "stack",
+      "columns": [
+        [
+          "modelling-visual"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-modelling-transfer",
+      "type": "stack",
+      "columns": [
+        [
+          "modelling-transfer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-modelling-practice-prediction",
+      "type": "stack",
+      "columns": [
+        [
+          "modelling-practice-prediction"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-modelling-practice-setup",
+      "type": "stack",
+      "columns": [
+        [
+          "modelling-practice-setup"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-wrapping-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "wrapping-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-wrapping-summary",
+      "type": "stack",
+      "columns": [
+        [
+          "wrapping-summary"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-wrapping-forward",
+      "type": "stack",
+      "columns": [
+        [
+          "wrapping-forward"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    }
+  ]
 }

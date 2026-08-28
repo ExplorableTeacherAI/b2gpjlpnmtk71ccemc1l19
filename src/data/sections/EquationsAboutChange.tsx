@@ -79,6 +79,12 @@ export const equationsAboutChangeBlocks: ReactElement[] = [
         </Block>
     </StackLayout>,
 
+    <StackLayout key="layout-block-1787910462860" maxWidth="xl">
+        <Block id="block-1787910462860" padding="sm">
+            <EditableParagraph id="para-block-1787910462860" blockId="block-1787910462860">A drink starts at 80 in the same 20 room with k=0.10,</EditableParagraph>
+        </Block>
+    </StackLayout>,
+
     <StackLayout key="layout-change-practice-solution" maxWidth="xl">
         <Block id="change-practice-solution" padding="sm">
             <MultipleChoiceQuestion
