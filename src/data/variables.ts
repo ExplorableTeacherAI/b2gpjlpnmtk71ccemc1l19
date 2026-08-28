@@ -106,6 +106,34 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         color: '#43A047',
     },
 
+    constantOfIntegrationValue: {
+        defaultValue: 1,
+        type: 'number',
+        label: 'Constant value',
+        description: 'The unknown constant A in the two competing answers for dy/dx = xy',
+        min: 0.5,
+        max: 3,
+        step: 0.1,
+        color: '#8E24AA',
+    },
+    constantCheckPoint: {
+        defaultValue: 1,
+        type: 'number',
+        label: 'Check point',
+        description: 'The x value at which both candidate answers are tested against dy/dx = xy',
+        min: 0.2,
+        max: 2,
+        step: 0.1,
+        color: '#43A047',
+    },
+    constantVersion: {
+        defaultValue: 'multiplied',
+        type: 'select',
+        label: 'Which answer',
+        description: 'Whether the constant is multiplied in at the integration step or added on at the end',
+        options: ['multiplied', 'added'],
+    },
+
     // ========================================
     // ADD YOUR VARIABLES HERE
     // ========================================

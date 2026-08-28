@@ -2,7 +2,8 @@ import { type ReactElement } from "react";
 import { Block } from "@/components/templates";
 import { StackLayout } from "@/components/layouts";
 import { EditableH2, EditableParagraph, InlineFormula } from "@/components/atoms";
-import { VisualOptionCards } from "@/components/organisms";
+import { ConstantTimingComparison } from "./visuals/ConstantTimingComparison";
+import { MultipleChoiceQuestion } from "./practice/MultipleChoiceQuestion";
 
 export const theConstantThatSetsTheCurveBlocks: ReactElement[] = [
     <StackLayout key="layout-constant-heading" maxWidth="xl">
@@ -22,43 +23,16 @@ export const theConstantThatSetsTheCurveBlocks: ReactElement[] = [
                 <InlineFormula latex="y = Ae^{x^2/2}" />, a multiplier. Adding
                 the constant one line too late would give{" "}
                 <InlineFormula latex="y = e^{x^2/2} + A" /> instead, and that
-                function does not satisfy the equation. So what difference does
-                the constant actually make?
+                function does not satisfy the equation. Switch between the two
+                versions below and test each one against{" "}
+                <InlineFormula latex="\frac{dy}{dx} = xy" />.
             </EditableParagraph>
         </Block>
     </StackLayout>,
 
     <StackLayout key="layout-constant-visual" maxWidth="xl">
-        <Block id="constant-visual" padding="sm">
-            <VisualOptionCards
-                blockId="constant-visual"
-                intro="Pick how your students will see what the constant of integration does."
-                cards={[
-                    {
-                        id: "family-of-curves",
-                        title: "A family of solution curves controlled by the constant",
-                        looks: "Several curves of the same shape stacked on one set of axes, with one of them highlighted.",
-                        manipulate: "Students change the constant and watch which curve is picked out, then drop a known point to fix it.",
-                        reveals: "Every value of the constant gives a valid solution until one known point selects a single curve.",
-                        recommended: true,
-                    },
-                    {
-                        id: "constant-timing-compare",
-                        title: "Two answers side by side: constant added at the right moment and too late",
-                        looks: "Two curves on the same axes, one from multiplying by the constant and one from adding it at the end, each checked against the original equation.",
-                        manipulate: "Students switch between the two versions and see which one satisfies the equation.",
-                        reveals: "Adding the constant after taking exponentials gives a function that fails the equation.",
-                        targetsMisconception: "Students forget the constant of integration, or add it too late",
-                    },
-                    {
-                        id: "point-to-constant",
-                        title: "A movable starting point that reveals its own constant",
-                        looks: "One curve through a marked point, with the value of the constant shown as the point moves.",
-                        manipulate: "Students drag the starting point and read off the constant that goes with it.",
-                        reveals: "The starting condition and the constant carry exactly the same information.",
-                    },
-                ]}
-            />
+        <Block id="constant-visual" padding="sm" hasVisualization>
+            <ConstantTimingComparison />
         </Block>
     </StackLayout>,
 
@@ -72,6 +46,74 @@ export const theConstantThatSetsTheCurveBlocks: ReactElement[] = [
                 <InlineFormula latex="x = 0" />, and exactly one member survives:
                 the particular solution.
             </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-constant-practice-particular" maxWidth="xl">
+        <Block id="constant-practice-particular" padding="sm">
+            <MultipleChoiceQuestion
+                prompt="The general solution of an equation is y = Ae^(3x). If y = 6 when x = 0, what is the particular solution?"
+                options={[
+                    {
+                        id: "six",
+                        label: "y = 6e^(3x)",
+                        correct: true,
+                    },
+                    {
+                        id: "added",
+                        label: "y = e^(3x) + 6",
+                        feedback:
+                            "That is the constant added on at the end rather than multiplied in. Switch to the added version above and watch the two slopes stop agreeing.",
+                    },
+                    {
+                        id: "two",
+                        label: "y = 2e^(3x)",
+                        feedback:
+                            "Put x = 0 into y = Ae^(3x) and remember what e to the power zero equals before solving for A.",
+                    },
+                    {
+                        id: "general-only",
+                        label: "It stays y = Ae^(3x); one point cannot fix A",
+                        feedback:
+                            "Slide the constant A above and watch a different curve get picked out each time — one known point is exactly what selects one of them.",
+                    },
+                ]}
+                correctFeedback="Correct. At x = 0 the exponential is 1, so A must be 6, and that single known value picks one curve out of the whole family."
+            />
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-constant-practice-timing" maxWidth="xl">
+        <Block id="constant-practice-timing" padding="sm">
+            <MultipleChoiceQuestion
+                prompt="A student solves dy/dx = xy, writes ln|y| = x²/2, then adds a constant at the very end to get y = e^(x²/2) + A. Where does this go wrong?"
+                options={[
+                    {
+                        id: "too-late",
+                        label: "The constant belongs on the line where the integration happens, and there it becomes a multiplier",
+                        correct: true,
+                    },
+                    {
+                        id: "both-fine",
+                        label: "Nothing is wrong — a constant is unknown, so it can be placed anywhere",
+                        feedback:
+                            "Choose the added version above and compare the two slope readings at any x. An unknown constant still has to sit where the integration put it.",
+                    },
+                    {
+                        id: "needs-two",
+                        label: "A second constant is needed on the other side as well",
+                        feedback:
+                            "One constant is enough, since two constants would just combine into one. Look again at which line the constant first appears on.",
+                    },
+                    {
+                        id: "exponential-wrong",
+                        label: "Taking exponentials of both sides is not allowed here",
+                        feedback:
+                            "Taking exponentials is a legitimate move. The problem is the line on which the constant was introduced — test both versions above.",
+                    },
+                ]}
+                correctFeedback="Correct. Integrating produces ln|y| = x²/2 + C, and exponentials turn that added C into the multiplier A, which is why the correct answer scales the curve instead of lifting it."
+            />
         </Block>
     </StackLayout>,
 ];
