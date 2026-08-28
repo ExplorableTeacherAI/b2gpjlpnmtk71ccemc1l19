@@ -9,7 +9,6 @@
     "change-visual",
     "change-solution-meaning",
     "change-practice-rate",
-    "block-1787910462860",
     "change-practice-solution",
     "separating-heading",
     "separating-method",
@@ -125,18 +124,6 @@
       "columns": [
         [
           "change-practice-rate"
-        ]
-      ],
-      "props": {
-        "maxWidth": "xl"
-      }
-    },
-    {
-      "id": "layout-block-1787910462860",
-      "type": "stack",
-      "columns": [
-        [
-          "block-1787910462860"
         ]
       ],
       "props": {
