@@ -73,6 +73,18 @@ initializeVariableColors(variableDefinitions);
  * check your .env file and set VITE_SHOW_EXAMPLES=false.
  */
 
+import { differentialEquationsIntroBlocks } from "./sections/DifferentialEquationsIntro";
+import { equationsAboutChangeBlocks } from "./sections/EquationsAboutChange";
+import { separatingTheVariablesBlocks } from "./sections/SeparatingTheVariables";
+import { theConstantThatSetsTheCurveBlocks } from "./sections/TheConstantThatSetsTheCurve";
+import { modellingRealChangeBlocks } from "./sections/ModellingRealChange";
+import { wrappingUpBlocks } from "./sections/WrappingUp";
+
 export const blocks: ReactElement[] = [
-    // Start adding your blocks here!
+    ...differentialEquationsIntroBlocks,
+    ...equationsAboutChangeBlocks,
+    ...separatingTheVariablesBlocks,
+    ...theConstantThatSetsTheCurveBlocks,
+    ...modellingRealChangeBlocks,
+    ...wrappingUpBlocks,
 ];
