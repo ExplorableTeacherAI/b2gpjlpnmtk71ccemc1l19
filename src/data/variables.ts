@@ -73,6 +73,39 @@ export interface VariableDefinition {
  *    { defaultValue: { x: 5, y: 10 }, type: 'object', schema: '{ x: number, y: number }' }
  */
 export const variableDefinitions: Record<string, VariableDefinition> = {
+    coolingStartTemperature: {
+        defaultValue: 80,
+        type: 'number',
+        label: 'Starting temperature',
+        description: 'Temperature of the drink at time zero, in degrees Celsius',
+        unit: '\u00B0C',
+        min: 30,
+        max: 95,
+        step: 1,
+        color: '#D81B60',
+    },
+    coolingRateConstant: {
+        defaultValue: 0.12,
+        type: 'number',
+        label: 'Cooling rate constant',
+        description: 'How fast heat escapes to the room (the k in dT/dt = -k(T - 20))',
+        min: 0.02,
+        max: 0.4,
+        step: 0.01,
+        color: '#1E88E5',
+    },
+    coolingReadoutTime: {
+        defaultValue: 5,
+        type: 'number',
+        label: 'Time',
+        description: 'Time in minutes at which the temperature is read off the curve',
+        unit: 'min',
+        min: 0,
+        max: 30,
+        step: 0.5,
+        color: '#43A047',
+    },
+
     // ========================================
     // ADD YOUR VARIABLES HERE
     // ========================================
