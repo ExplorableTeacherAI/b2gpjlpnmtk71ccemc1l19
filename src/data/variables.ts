@@ -134,6 +134,39 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         options: ['multiplied', 'added'],
     },
 
+    modelStartTemperature: {
+        defaultValue: 85,
+        type: 'number',
+        label: 'Pouring temperature',
+        description: 'Temperature of the drink when it is poured, in degrees Celsius',
+        unit: '\u00B0C',
+        min: 40,
+        max: 95,
+        step: 1,
+        color: '#D81B60',
+    },
+    modelRateConstant: {
+        defaultValue: 0.08,
+        type: 'number',
+        label: 'Cooling rate constant',
+        description: 'The k in dT/dt = -k(T - 20) for the modelling lab',
+        min: 0.02,
+        max: 0.3,
+        step: 0.01,
+        color: '#1E88E5',
+    },
+    modelTargetTemperature: {
+        defaultValue: 55,
+        type: 'number',
+        label: 'Drinkable temperature',
+        description: 'The temperature the student is waiting for the drink to reach',
+        unit: '\u00B0C',
+        min: 25,
+        max: 80,
+        step: 1,
+        color: '#43A047',
+    },
+
     // ========================================
     // ADD YOUR VARIABLES HERE
     // ========================================
