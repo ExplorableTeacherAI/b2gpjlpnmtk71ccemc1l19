@@ -32,6 +32,7 @@
     "modelling-practice-setup",
     "wrapping-heading",
     "wrapping-summary",
+    "wrapping-equation-summary",
     "wrapping-forward"
   ],
   "rows": [
@@ -401,6 +402,18 @@
       "columns": [
         [
           "wrapping-summary"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-wrapping-equation-summary",
+      "type": "stack",
+      "columns": [
+        [
+          "wrapping-equation-summary"
         ]
       ],
       "props": {
