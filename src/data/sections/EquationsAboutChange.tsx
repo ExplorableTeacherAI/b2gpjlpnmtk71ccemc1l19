@@ -79,6 +79,40 @@ export const equationsAboutChangeBlocks: ReactElement[] = [
         </Block>
     </StackLayout>,
 
+    <StackLayout key="layout-change-practice-cooling-time" maxWidth="xl">
+        <Block id="change-practice-cooling-time" padding="sm">
+            <MultipleChoiceQuestion
+                prompt="A drink starts at 80°C in the same 20°C room with k = 0.10. Roughly how many minutes pass before it cools to about 42°C?"
+                options={[
+                    {
+                        id: "ten",
+                        label: "About 10 minutes",
+                        correct: true,
+                    },
+                    {
+                        id: "seven",
+                        label: "About 7 minutes",
+                        feedback:
+                            "That is when the gap above the room has halved, so the drink is near 50°C. Set the starting temperature to 80 and k to 0.10 above, then slide the time on until the curve reaches 42.",
+                    },
+                    {
+                        id: "twenty",
+                        label: "About 20 minutes",
+                        feedback:
+                            "By then the drink has cooled well past 42°C. Try 80 degrees with k = 0.10 above and read the temperature at 20 minutes before choosing again.",
+                    },
+                    {
+                        id: "thirty-eight",
+                        label: "About 38 minutes, since it must lose 38 degrees at one degree a minute",
+                        feedback:
+                            "That assumes a steady loss. Watch the curve above flatten out: the drink loses degrees quickly at first and far more slowly later.",
+                    },
+                ]}
+                correctFeedback="Correct. The gap above the room falls from 60°C to about 22°C, and with k = 0.10 that takes close to 10 minutes."
+            />
+        </Block>
+    </StackLayout>,
+
     <StackLayout key="layout-change-practice-solution" maxWidth="xl">
         <Block id="change-practice-solution" padding="sm">
             <MultipleChoiceQuestion
