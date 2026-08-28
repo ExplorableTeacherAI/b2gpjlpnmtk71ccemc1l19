@@ -84,33 +84,39 @@ export const modellingRealChangeBlocks: ReactElement[] = [
     <StackLayout key="layout-modelling-practice-setup" maxWidth="xl">
         <Block id="modelling-practice-setup" padding="sm">
             <MultipleChoiceQuestion
-                prompt="A bacterial culture grows at a rate proportional to the number of bacteria present. Which equation says exactly that, and what does its solution look like?"
+                prompt="A bacterial culture grows at a rate proportional to the number of bacteria present. Here is one student's full answer. Is it correct?"
+                proposedAnswer={
+                    <div className="space-y-2">
+                        <div>
+                            Rate proportional to the amount present gives{" "}
+                            <InlineFormula latex="\frac{dN}{dt} = kN" />.
+                        </div>
+                        <div>
+                            Separating and integrating:{" "}
+                            <InlineFormula latex="\int \frac{1}{N}\,dN = \int k\,dt" />, so{" "}
+                            <InlineFormula latex="\ln N = kt + C" />.
+                        </div>
+                        <div>
+                            Taking exponentials:{" "}
+                            <InlineFormula latex="N = Ae^{kt}" />, where{" "}
+                            <InlineFormula latex="A" /> is the number of bacteria at the start.
+                        </div>
+                    </div>
+                }
                 options={[
                     {
-                        id: "growth",
-                        label: "dN/dt = kN, giving N = Ae^(kt)",
+                        id: "yes",
+                        label: "Yes, the answer is correct",
                         correct: true,
                     },
                     {
-                        id: "constant-rate",
-                        label: "dN/dt = k, giving N = kt + A",
+                        id: "no",
+                        label: "No, there is a mistake in it",
                         feedback:
-                            "That says the culture gains the same number every minute, whatever its size. Reread the sentence: the rate depends on how many are already there.",
-                    },
-                    {
-                        id: "decay",
-                        label: "dN/dt = -kN, giving N = Ae^(-kt)",
-                        feedback:
-                            "That is the decay version, which shrinks over time like the cooling drink above. A growing culture needs the opposite sign.",
-                    },
-                    {
-                        id: "time-proportional",
-                        label: "dN/dt = kt, giving N = kt²/2 + A",
-                        feedback:
-                            "That makes the rate depend on the clock rather than on the population. Check which quantity the sentence says the rate is proportional to.",
+                            "Check each line in turn. The rate carries a factor of N as the sentence demands, each letter is gathered with its own differential, the constant appears at the integration step, and exponentials turn that constant into a multiplier. Every step holds up.",
                     },
                 ]}
-                correctFeedback="Correct. Proportional to the amount present means the rate carries a factor of N, and separating gives an exponential — the same solution as the drink, with the sign of k flipped."
+                correctFeedback="Correct. The model matches the sentence, the variables are separated before integrating, the constant appears on the integration line, and exponentials turn it into the multiplier A, which is the starting population."
             />
         </Block>
     </StackLayout>,

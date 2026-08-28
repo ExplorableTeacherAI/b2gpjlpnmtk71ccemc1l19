@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Button, RadioGroup, RadioGroupItem, Label } from "@/components/atoms";
 
 export interface ChoiceOption {
@@ -11,6 +11,8 @@ export interface ChoiceOption {
 
 export interface MultipleChoiceQuestionProps {
     prompt: string;
+    /** Optional worked answer shown for the student to judge before choosing */
+    proposedAnswer?: ReactNode;
     options: ChoiceOption[];
     /** Shown when the correct option is chosen */
     correctFeedback: string;
@@ -22,6 +24,7 @@ export interface MultipleChoiceQuestionProps {
  */
 export const MultipleChoiceQuestion = ({
     prompt,
+    proposedAnswer,
     options,
     correctFeedback,
 }: MultipleChoiceQuestionProps) => {
@@ -34,6 +37,12 @@ export const MultipleChoiceQuestion = ({
     return (
         <div className="rounded-lg border border-slate-200 bg-white p-4">
             <div className="mb-3 text-sm font-medium text-slate-800">{prompt}</div>
+
+            {proposedAnswer && (
+                <div className="mb-3 rounded-md border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">
+                    {proposedAnswer}
+                </div>
+            )}
 
             <RadioGroup
                 value={selected}
